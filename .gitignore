@@ -1,0 +1,15 @@
+# Archivos generados por .NET
+bin/
+obj/
+
+# Archivos temporales
+*.user
+*.suo
+*.cache
+
+# Configuración local
+.vs/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
