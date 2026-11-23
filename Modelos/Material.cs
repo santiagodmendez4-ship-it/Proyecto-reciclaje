@@ -8,9 +8,7 @@ public abstract class Material
     protected Material(TipoMaterial tipo, decimal pesoKg)
     {
         if (pesoKg <= 0)
-        {
             throw new ArgumentException("El peso debe ser mayor que cero.");
-        }
 
         Tipo = tipo;
         PesoKg = pesoKg;
@@ -18,6 +16,9 @@ public abstract class Material
 
     public decimal CalcularValor(decimal precioPorKg)
     {
+        if (precioPorKg <= 0)
+            throw new ArgumentException("El precio debe ser mayor que cero.");
+
         return PesoKg * precioPorKg;
     }
 }
